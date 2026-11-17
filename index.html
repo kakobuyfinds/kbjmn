@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Browse a HipoBuy spreadsheet with real CAFANS listings, estimated USD prices, and a checklist for sizing, warehouse photos and shipping quotes.">
+<title>HipoBuy spreadsheet | CAFANS Finds, Sizing &amp; Shipping</title>
+<style>
+:root{color-scheme:light;font:100%/1.55 system-ui,sans-serif;color:#182c23;background:#f7f7ef}
+*{box-sizing:border-box}
+body{margin:0}
+a{color:#124b35;text-underline-offset:.2em}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #aa4d1e;outline-offset:4px}
+.wrap{width:min(100% - 2rem,65rem);margin-inline:auto}
+header{text-align:center;background:#123c2d;color:#fbfbed;padding:clamp(3rem,9vw,7rem) 0}
+h1,h2,h3,p{margin:0 0 .8rem}
+h1{font:700 clamp(2.6rem,8vw,6rem)/1.05 Georgia,serif}
+h2{font:700 clamp(1.75rem,4vw,2.6rem)/1.1 Georgia,serif}
+header p{max-width:39rem;margin:1.25rem auto}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem}
+.actions a{display:inline-block;padding:.7rem 1.2rem;border-radius:2rem;background:#e2f296;color:#162a20;font-weight:750;text-decoration:none;border:1px solid #e2f296}
+.actions a+a{background:transparent;color:#fbfbed}
+main section{padding:2.5rem 0;border-bottom:1px solid #ccd6c9}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.8rem;margin-top:1rem}
+article{background:#fff;border:1px solid #ccd6c9;border-radius:.9rem;padding:1rem}
+article h3{font-size:1.12rem}
+article p{color:#475b50}
+label{display:block;font-weight:650}
+input{width:min(100%,24rem);padding:.65rem;font:inherit;border:1px solid #62776b;border-radius:.4rem;margin:.25rem 0 .5rem}
+li+li{margin-top:.55rem}
+details{padding:.75rem 0;border-bottom:1px solid #ccd6c9}
+summary{cursor:pointer;font-weight:650}
+details p{margin:.6rem 0 0}
+footer{text-align:center;padding:2rem 0}
+</style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/kbjmn/">
+</head>
+<body>
+<!--
+搜索参考：https://hipo-buy.com/ 提供分类与各国物流研究；https://www.ssfinds.com/hipobuy-spreadsheet 提供链接、QC 与下单教程。本页采用可抓取的 CAFANS 商品快照、即时筛选及同口径运费清单。搜索结果顺序随地区而异。
+收录尚未提交。发布后为最终公开 URL 添加自引用 canonical，在已验证的 Google Search Console 和 Bing Webmaster Tools 中提交该 URL。
+-->
+<header>
+  <div class="wrap">
+    <h1>HipoBuy spreadsheet</h1>
+    <p>Browse CAFANS finds for shoes and streetwear. Compare the listed price and size, then check what the parcel would cost to ship.</p>
+    <div class="actions">
+      <a href="https://cafans.com">HipoBuy spreadsheet</a>
+      <a href="https://cafans.com">Buy it now</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section aria-labelledby="workflow">
+    <h2 id="workflow">Before you shortlist a find</h2>
+    <p>Open the CAFANS listing and record the exact size, color and seller price. Check whether HipoBuy is available for that listing before you budget for the order.</p>
+  </section>
+
+  <section aria-labelledby="catalog">
+    <h2 id="catalog">CAFANS product catalog</h2>
+    <p>A snapshot of featured listings from <a href="https://cafans.com/">CAFANS</a>. Prices are estimates in USD. Confirm current price, stock and options on the listing.</p>
+    <div id="filter" hidden>
+      <label for="query">Filter by product or category</label>
+      <input id="query" type="search" placeholder="For example, shoes">
+      <p id="status" role="status"></p>
+    </div>
+    <div class="grid" id="products">
+      <article>
+        <h3><a href="https://cafans.com/goods-158791.html">Leather Slides</a></h3>
+        <p>Shoes · $62.36 USD</p>
+      </article>
+      <article>
+        <h3><a href="https://cafans.com/goods-158790.html">Platform Slides</a></h3>
+        <p>Shoes · $46.67 USD</p>
+      </article>
+      <article>
+        <h3><a href="https://cafans.com/goods-158792.html">Sweatshirt</a></h3>
+        <p>Hoodies &amp; sweaters · $27.50 USD</p>
+      </article>
+      <article>
+        <h3><a href="https://cafans.com/goods-158280.html">Thug Club - Rock Hoodie</a></h3>
+        <p>Hoodies &amp; sweaters · $37.22 USD</p>
+      </article>
+      <article>
+        <h3><a href="https://cafans.com/goods-158200.html">Unisex Embroidered Oversized T-Shirt</a></h3>
+        <p>T-shirts · $32.64 USD</p>
+      </article>
+      <article>
+        <h3><a href="https://cafans.com/goods-158279.html">Corteiz Jacket</a></h3>
+        <p>Jackets · $42.78 USD</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="checks">
+    <h2 id="checks">Size, QC photos and shipping</h2>
+    <ol>
+      <li><strong>Record measurements.</strong> Save the seller’s size chart and units. For tops, compare chest width and body length against a garment that fits. For shoes, check whether the chart lists foot length or insole length.</li>
+      <li><strong>Review warehouse photos.</strong> If QC photos are available for your order, compare the size label, color and visible details with your selected option. Ask for a measurement photo if the fit is unclear.</li>
+      <li><strong>Compare quotes for the same parcel.</strong> Use the same destination, packed dimensions and weight. Record each line’s billable weight, delivery estimate and included services. Compare the item cost, domestic delivery, agent fees, international shipping and any applicable import charges in one currency.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">HipoBuy spreadsheet FAQ</h2>
+    <details>
+      <summary>Where do the product links go?</summary>
+      <p>Each product name opens its CAFANS detail page. Check the available purchase options there.</p>
+    </details>
+    <details>
+      <summary>Does the listed price include shipping?</summary>
+      <p>The catalog shows indicative item prices. Check the agent’s quote for delivery and other fees.</p>
+    </details>
+    <details>
+      <summary>What should I do if a listing changes?</summary>
+      <p>Recheck the seller, size, color and current price before using a saved link or placing an order.</p>
+    </details>
+  </section>
+</main>
+<footer class="wrap">Independent shopping guide · Product listings from CAFANS</footer>
+<script>
+const query = document.getElementById('query');
+const cards = [...document.querySelectorAll('#products article')];
+const status = document.getElementById('status');
+
+function updateCatalog() {
+  const terms = query.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  let count = 0;
+
+  for (const card of cards) {
+    const text = card.textContent.toLowerCase();
+    card.hidden = !terms.every(term => text.includes(term));
+    count += Number(!card.hidden);
+  }
+
+  status.textContent = count
+    ? count + (count === 1 ? ' listing' : ' listings')
+    : 'No matching listings.';
+}
+
+query.addEventListener('input', updateCatalog);
+updateCatalog();
+document.getElementById('filter').hidden = false;
+</script>
+</body>
+</html>
